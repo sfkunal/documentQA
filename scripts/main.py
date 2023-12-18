@@ -12,13 +12,13 @@ def custom(model_name, from_hf=False):
     print(f"\n > Loading Model: {model_name}...")
 
     t0 = time.time()
-    prompter = Prompt().load_model(model_name, from_hf=from_hf, api_key="enter here")
+    prompter = Prompt().load_model(model_name, from_hf=from_hf, api_key="fill in")
     t1 = time.time()
 
     print(f"\n > Model {model_name} load time: {t1-t0} seconds \n")
 
     t2 = time.time()
-    library_path = "/Users/sfkunal/Code/doc_qa/papers"
+    library_path = "/Users/sfkunal/Code/documentQA/documents/cs_lectures"
     lib = Library().create_new_library("my_lib")
     lib.add_files(library_path)
     t3 = time.time()
